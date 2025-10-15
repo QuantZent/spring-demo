@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+
+app:
+  assets:
+    devServer: http://localhost:5173
+    entry: src/main.tsx

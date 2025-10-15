@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+</head>
+<body>
+<!--
+  The 'th:text' attribute will replace the content of the h1 tag
+  with the value of the 'message' variable passed from the controller.
+-->
+<h1 th:text="${message}">Default Message</h1>
+
+<p>This page was rendered dynamically by the controller.</p>
+
+<div id="root"></div>
+
+<script src="/vite/entry.mjs" type="module"></script>
+</body>
+</html>

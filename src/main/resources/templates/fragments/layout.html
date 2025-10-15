@@ -1,0 +1,31 @@
+<!-- layout.html -->
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+
+    <!-- DEV: React Fast Refresh preamble + Vite client + entry -->
+    <th:block th:replace="~{::head-dev-scripts}"></th:block>
+
+    <title>App</title>
+</head>
+<body>
+<div th:replace="${content}"></div>
+</body>
+
+<!-- define the fragment INSIDE layout so nothing reorders it -->
+<th:block th:fragment="head-dev-scripts">
+    <!-- IMPORTANT: prevent Thymeleaf from touching this block -->
+    <script th:inline="none" type="module">
+        import RefreshRuntime from "http://localhost:5173/@react-refresh"
+
+        RefreshRuntime.injectIntoGlobalHook(window)
+        window.$$RefreshReg$ = () => {
+        }
+        window.$$RefreshSig$ = () => (type) => type
+        window.__vite_plugin_react_preamble_installed__ = true
+    </script>
+    <script src="http://localhost:5173/@vite/client" type="module"></script>
+    <script src="http://localhost:5173/src/main.tsx" type="module"></script>
+</th:block>
+</html>
