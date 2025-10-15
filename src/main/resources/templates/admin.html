@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Page</title>
+    <th:block th:utext="${@assetHelper.tag('style.css')}"></th:block>
 </head>
 <body>
 <!--
@@ -15,6 +16,7 @@
 
 <div id="root"></div>
 
-<script src="/vite/entry.mjs" type="module"></script>
+<th:block th:utext="${@assetHelper.tag('main.tsx')}"></th:block>
+
 </body>
 </html>

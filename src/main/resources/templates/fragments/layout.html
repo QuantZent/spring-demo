@@ -1,6 +1,6 @@
 <!-- layout.html -->
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="utf-8"/>
 
@@ -16,7 +16,7 @@
 <!-- define the fragment INSIDE layout so nothing reorders it -->
 <th:block th:fragment="head-dev-scripts">
     <!-- IMPORTANT: prevent Thymeleaf from touching this block -->
-    <script th:inline="none" type="module">
+    <script type="module" th:inline="none">
         import RefreshRuntime from "http://localhost:5173/@react-refresh"
 
         RefreshRuntime.injectIntoGlobalHook(window)
@@ -25,7 +25,7 @@
         window.$$RefreshSig$ = () => (type) => type
         window.__vite_plugin_react_preamble_installed__ = true
     </script>
-    <script src="http://localhost:5173/@vite/client" type="module"></script>
-    <script src="http://localhost:5173/src/main.tsx" type="module"></script>
+    <script type="module" src="http://localhost:5173/@vite/client"></script>
+    <script type="module" src="http://localhost:5173/src/main.tsx"></script>
 </th:block>
 </html>

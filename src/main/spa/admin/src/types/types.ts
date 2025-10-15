@@ -19,7 +19,7 @@ export interface ApiResponse<T> {
 }
 
 export interface ApiErrorResponse {
-    status: string;;
+    status: string;
   errors: {
     errorCode: string;
     errorMessage: string;

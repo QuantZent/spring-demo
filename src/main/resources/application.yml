@@ -4,5 +4,5 @@ spring:
 
 app:
   assets:
-    devServer: http://localhost:5173
+    devServer: http://localhost:5173/admin
     entry: src/main.tsx
