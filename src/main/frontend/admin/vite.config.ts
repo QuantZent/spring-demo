@@ -6,11 +6,11 @@ import react from "@vitejs/plugin-react";
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
-  base: '/admin/',
+  base: "/admin/",
   server: {
     hmr: true,
     port: 5173,
-    strictPort: true
+    strictPort: true,
   },
   // publicDir: "public",
   plugins: [
@@ -35,7 +35,7 @@ export default defineConfig({
     cssCodeSplit: true,
     sourcemap: process.env.NODE_ENV === "production",
     rollupOptions: {
-      input: 'src/main.tsx',
+      input: "src/main.tsx",
       output: {
         entryFileNames: "assets/[name].[hash].js",
         chunkFileNames: "assets/[name].[hash].js",
